@@ -143,3 +143,7 @@ vite.config.ts.timestamp-*
 
 # Dependencies
 node_modules/
+
+# データベースファイル
+*.sqlite
+*.db

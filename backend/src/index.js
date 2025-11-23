@@ -1,3 +1,9 @@
+const { testConnection, syncDatabase } = require('./models');
+
+(async () => {
+  await testConnection();
+  await syncDatabase();
+})();
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
