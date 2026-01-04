@@ -9,7 +9,7 @@ exports.register = async (req, res) => {
 
         // バリデーション
         if (!username || !email || !password) {
-            return res.status(400).json({ message: 'すべてのフィールドを入力してくださフィールドを入力してください' });
+            return res.status(400).json({ message: 'すべてのフィールドを入力してください' });
         }
 
         // 既存ユーザーの確認
