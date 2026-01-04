@@ -39,3 +39,12 @@ export const categoryAPI = {
   update: (id, categoryData) => api.put(`/categories/${id}`, categoryData),
   delete: (id) => api.delete(`/categories/${id}`),
 };
+
+// 問題関連のAPI
+export const questionAPI = {
+  getAll: () => api.get('/questions'),
+  getById: (id) => api.get(`/questions/${id}`),
+  create: (questionData) => api.post('/questions', questionData),
+  update: (id, questionData) => api.put(`/questions/${id}`, questionData),
+  delete: (id) => api.delete(`/questions/${id}`),
+};

@@ -5,19 +5,19 @@ const Question = require('./Question');
 const Task = require('./Task');
 
 // リレーションシップの定義
-User.hasMany(Category, { foreignKey: 'userId' });
+User.hasMany(Category, { foreignKey: 'userId', onDelete: 'CASCADE' });
 Category.belongsTo(User, { foreignKey: 'userId' });
 
-User.hasMany(Question, { foreignKey: 'userId' });
+User.hasMany(Question, { foreignKey: 'userId', onDelete: 'CASCADE' });
 Question.belongsTo(User, { foreignKey: 'userId' });
 
-Category.hasMany(Question, { foreignKey: 'categoryId' });
+Category.hasMany(Question, { foreignKey: 'categoryId', onDelete: 'SET NULL' });
 Question.belongsTo(Category, { foreignKey: 'categoryId' });
 
-Question.hasMany(Task, { foreignKey: 'questionId' });
+Question.hasMany(Task, { foreignKey: 'questionId', onDelete: 'CASCADE' });
 Task.belongsTo(Question, { foreignKey: 'questionId' });
 
-User.hasMany(Task, { foreignKey: 'userId' });
+User.hasMany(Task, { foreignKey: 'userId', onDelete: 'CASCADE' });
 Task.belongsTo(User, { foreignKey: 'userId' });
 
 // データベース接続テスト

@@ -1,12 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    navigate("/login");
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    navigate('/login');
   };
 
   return (
@@ -22,6 +22,9 @@ function Navbar() {
           <Link to="/categories" style={styles.link}>
             カテゴリ
           </Link>
+          <Link to="/questions" style={styles.link}>
+            問題
+          </Link>
           <button onClick={handleLogout} style={styles.logoutButton}>
             ログアウト
           </button>
@@ -33,43 +36,43 @@ function Navbar() {
 
 const styles = {
   nav: {
-    backgroundColor: "white",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    backgroundColor: 'white',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
   },
   container: {
-    maxWidth: "1200px",
-    margin: "0 auto",
-    padding: "0 20px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: "60px",
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 20px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: '60px',
   },
   logo: {
-    fontSize: "20px",
-    fontWeight: "bold",
-    color: "#007bff",
-    textDecoration: "none",
+    fontSize: '20px',
+    fontWeight: 'bold',
+    color: '#007bff',
+    textDecoration: 'none',
   },
   links: {
-    display: "flex",
-    alignItems: "center",
-    gap: "20px",
+    display: 'flex',
+    alignItems: 'center',
+    gap: '20px',
   },
   link: {
-    color: "#333",
-    textDecoration: "none",
-    fontSize: "14px",
-    fontWeight: "500",
+    color: '#333',
+    textDecoration: 'none',
+    fontSize: '14px',
+    fontWeight: '500',
   },
   logoutButton: {
-    padding: "8px 16px",
-    backgroundColor: "#dc3545",
-    color: "white",
-    border: "none",
-    borderRadius: "4px",
-    cursor: "pointer",
-    fontSize: "14px",
+    padding: '8px 16px',
+    backgroundColor: '#dc3545',
+    color: 'white',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    fontSize: '14px',
   },
 };
 
