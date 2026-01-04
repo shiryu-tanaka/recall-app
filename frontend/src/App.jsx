@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Categories from './pages/Categories';
 import Questions from './pages/Questions';
 import QuestionForm from './pages/QuestionForm';
+import TaskDetail from './pages/TaskDetail';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/questions" element={<Questions />} />
         <Route path="/questions/new" element={<QuestionForm />} />
         <Route path="/questions/edit/:id" element={<QuestionForm />} />
+        <Route path="/tasks/:id" element={<TaskDetail />} />
       </Routes>
     </Router>
   );

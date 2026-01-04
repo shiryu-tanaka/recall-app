@@ -48,3 +48,12 @@ export const questionAPI = {
   update: (id, questionData) => api.put(`/questions/${id}`, questionData),
   delete: (id) => api.delete(`/questions/${id}`),
 };
+
+// タスク関連のAPI
+export const taskAPI = {
+  getAll: () => api.get('/tasks'),
+  getToday: () => api.get('/tasks/today'),
+  getWeekly: () => api.get('/tasks/weekly'),
+  getById: (id) => api.get(`/tasks/${id}`),
+  complete: (id) => api.put(`/tasks/${id}/complete`),
+};
