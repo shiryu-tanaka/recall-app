@@ -1,0 +1,26 @@
+{
+  "name": "recall-app",
+  "version": "1.0.0",
+  "description": "間隔反復学習を活用した問題管理・学習支援アプリケーション",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiryu-tanaka/recall-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shiryu-tanaka/recall-app/issues"
+  },
+  "homepage": "https://github.com/shiryu-tanaka/recall-app#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
