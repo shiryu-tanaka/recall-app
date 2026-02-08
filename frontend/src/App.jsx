@@ -6,6 +6,7 @@ import Categories from './pages/Categories';
 import Questions from './pages/Questions';
 import QuestionForm from './pages/QuestionForm';
 import TaskDetail from './pages/TaskDetail';
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/questions/edit/:id" element={<QuestionForm />} />
         <Route path="/tasks/:id" element={<TaskDetail />} />
       </Routes>
+      <Analytics />
     </Router>
   );
 }
