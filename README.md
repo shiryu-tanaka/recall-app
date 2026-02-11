@@ -1,4 +1,4 @@
-# Recall App - アクティブリコール学習アプリ
+# Recall アクティブリコール学習アプリ
 
 間隔反復学習を活用した問題管理・学習支援Webアプリケーションです。
 [(recall-app-alpha.vercel.app)](https://recall-app-alpha.vercel.app/)
